@@ -1,19 +1,11 @@
-
 import './App.css';
-import Footer from './componets/Footer/Footer';
-import Header from './componets/Header/Header';
+import { RouterProvider } from "react-router-dom";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
-
+import router from "./Router/router";
 
 function App() {
   return (
-<>
-<Header/>
-{/* <Footer/> */}
-
-
-</>
+    <RouterProvider router={router} />
   );
 }
 
