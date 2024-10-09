@@ -30,6 +30,7 @@ import Footer15 from "../Pages/FooterPages/Footer15/Footer15";
 import Footer16 from "../Pages/FooterPages/Footer16/Footer16";
 import Footer17 from "../Pages/FooterPages/Footer17/Footer17";
 import Footer18 from "../Pages/FooterPages/Footer18/Footer18";
+import LandingPage from "../Pages/LandingPage/First-Page/LandingPage";
 
 
 
@@ -94,7 +95,7 @@ const router = createBrowserRouter(
                 },
                 {
                     path : '/nvidia-rtx-40-star-wars-outlaws',
-                    element : <Page13 />
+                    element : <LandingPage />
                 },
                 // PC Gamer navbar pages
                 {

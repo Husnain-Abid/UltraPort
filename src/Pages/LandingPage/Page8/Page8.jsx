@@ -48,6 +48,26 @@ export default function Page8() {
     }
   ];
 
+
+
+  const resImgURL = ASSET_PATHS.RES_IMG_URL;
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 700);
+    };
+
+    updateScreenSize(); // Set initial state
+    window.addEventListener('resize', updateScreenSize); // Update on resize
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize); // Clean up
+    };
+  }, []);
+
+
   return (
     <>
 

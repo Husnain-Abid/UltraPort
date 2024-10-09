@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Page6.css";
 import Card from '../../../componets/Card/Card';
 import ASSET_PATHS from '../../../utils/constant';
@@ -47,6 +47,30 @@ export default function Page6() {
     }
   ];
 
+
+
+  const resImgURL = ASSET_PATHS.RES_IMG_URL;
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 700);
+    };
+
+    updateScreenSize(); // Set initial state
+    window.addEventListener('resize', updateScreenSize); // Update on resize
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize); // Clean up
+    };
+  }, []);
+
+
+
+
+
+
   return (
     <>
 
@@ -56,13 +80,26 @@ export default function Page6() {
 
 
           <div className='image-container'>
-            <img src={`${imgURL}/page6-1.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-1.jpg` : `${imgURL}/page6-1.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />          </div>
 
 
           <div className='image-container'>
-            <img src={`${imgURL}/page6-2.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-2.jpg` : `${imgURL}/page6-2.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />           </div>
+
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-3.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />          </div>
 
           <div className='content w-100 py-5 '>
             <h1>PC Gamer avec <span> NVIDIA GeForce RTX 40 SUPER </span> carte graphique</h1>
@@ -72,56 +109,133 @@ export default function Page6() {
           <Card productCardData={productCardData} />
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-3.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-4.jpg` : `${imgURL}/page6-4.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-4.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-5.jpg` : `${imgURL}/page6-5.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-5.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-6.jpg` : `${imgURL}/page6-6.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-6.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-7.jpg` : `${imgURL}/page6-7.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-7.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-8.jpg` : `${imgURL}/page6-8.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-8.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-9.jpg` : `${imgURL}/page6-9.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-9.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-10.jpg` : `${imgURL}/page6-10.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-10.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-11.jpg` : `${imgURL}/page6-11.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-11.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-12.jpg` : `${imgURL}/page6-12.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-12.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-13.jpg` : `${imgURL}/page6-13.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-13.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-14.jpg` : `${imgURL}/page6-14.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-14.jpg`} className='w-100' />
-          </div>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page6-15.jpg` : `${imgURL}/page6-15.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />            </div>
 
           <div className='image-container '>
-            <img src={`${imgURL}/page6-15.jpg`} className='w-100' />
+          <img
+              src={`${resImgURL}/page6-16.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />          </div>
+
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-17.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
           </div>
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-18.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
+          </div>
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-19.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
+          </div>
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-20.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
+          </div>
+          
+          <div className='image-container'>
+            <img
+              src={`${resImgURL}/page6-21.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
+          </div>
+
 
 
         </div>
@@ -135,5 +249,5 @@ export default function Page6() {
   );
 
 
-  
+
 }

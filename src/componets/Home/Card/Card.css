@@ -42,14 +42,17 @@
 
 
 .product-card .star-rating {
-    font-size: 0.9em; /* Adjust size as needed */
-    margin: 5px 0; /* Space above and below the stars */
+    font-size: 0.9em;
+    /* Adjust size as needed */
+    margin: 5px 0;
+    /* Space above and below the stars */
 }
-  
-  .product-card  .star-rating .fa-star {
-    margin-right: 2px; /* Space between stars */
-  }
-  
+
+.product-card .star-rating .fa-star {
+    margin-right: 2px;
+    /* Space between stars */
+}
+
 
 
 .product-card .ps-pc {
@@ -102,21 +105,42 @@
     font-weight: 600;
 }
 
+.product-card .card-btn {
+    display: flex;
+}
+
 
 /* buttons */
 .product-card .cart-btn {
-    background-color: #89c600;
     color: white;
+    /* Text color matches the hover background */
     padding: 10px 20px;
-    /* margin-right: 10px; */
     clip-path: polygon(0 0, 100% 0, 88% 100%, 0% 100%);
     border: none;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #89c600 50%, #66b100 50%);
+    transition: background-position 0.2s ease-in-out;
+}
+
+.product-card .cart-btn:hover {
+    background-position: -100% 0;
+    color: white;
+    /* Change text color to white on hover */
 }
 
 .product-card .plus-btn {
     background-color: #5e646b;
+    /* Initial background color */
     color: white;
     padding: 10px 20px;
     border: none;
     clip-path: polygon(0.4rem 0, 100% 0, 100% 100%, 0 100%);
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #373f47 50%, #5e646b 50%);
+    transition: background-position 0.2s ease-in-out;
+    font-size: 0.7rem;
+}
+
+.product-card .plus-btn:hover {
+    background-position: -100% 0;
 }

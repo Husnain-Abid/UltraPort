@@ -10,6 +10,17 @@
     /* Keep aspect ratio */
 }
 
+.footer-section-1 h3 {
+    font-size: 2rem;
+}
+
+.footer-section-1 p {
+    font-size: 0.7rem;
+    color: #b4b9bb;
+}
+
+
+
 .footer-section-1 .newsletter-form {
     width: 100%;
     display: flex;
@@ -20,17 +31,18 @@
     background-clip: border-box;
     background-color: #101922;
     border-color: #101922;
-    color: #fff;
-    padding: 1vh 2vw;
+    color: #b4b9bb;
+    padding: 2vh 1.5vw;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 0;
     box-shadow: none;
     color: #101922;
     font-family: inherit;
-    font-size: 1vh;
+    font-size: 1rem;
     line-height: 1vh;
     transition: all 0.3s ease-in-out;
+
     /* Smooth transition on focus */
 }
 
@@ -47,30 +59,29 @@
 
 .footer-section-1 .newsletter-form button {
     background-color: #fff;
-    padding: 1vh 2vw;
+    padding: 2vh 2vw;
     background-clip: padding-box;
     border: 1px solid rgba(0, 0, 0, .1);
     border-radius: 0;
     box-shadow: none;
     color: #101922;
     font-family: inherit;
-    font-size: 1vh;
+    font-size: 0.8rem;
     line-height: 1vh;
     margin-left: 2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+    clip-path: polygon(0% 0%, 100% 0%, 95% 100%, 0% 100%);
+    background: #fff;
+    background-size: 200% 100%;
+    background-image: linear-gradient(to right, #fff 50%, #89c600 50%);
+    transition: background-position 0.2s ease-in-out;
 }
 
-.footer-section-1 .newsletter-form button:before {
-    background: #89c600;
-    bottom: 0;
-    content: "";
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: scaleX(0);
-    transform-origin: 0 50%;
-    transition: transform .25s ease-out;
-    z-index: -1;
+.footer-section-1 .newsletter-form button:hover {
+    background-position: -100% 0;
+    color: #fff;
+    /* Optional: Change text color on hover */
 }
 
 .footer-section-1 .text-white {
@@ -79,34 +90,29 @@
 }
 
 
-@media (width: 991px) {
+@media (max-width: 991px) {
 
-    /* Stack image and form vertically on medium screens and smaller */
+    .footer-section-1 h3 {
+        font-size: 1.5rem;
+    }
 
-    .footer-section .row {
+    .footer-section-1 p {
+        font-size: 0.9rem;
+    }
+
+    .footer-section-1 .newsletter-form {
+        display: flex;
         flex-direction: column;
     }
 
-    .footer-section .newsletter-form {
+    .footer-section-1 .newsletter-form input {
         width: 100%;
     }
 
-    .footer-section .left-image {
-        text-align: center;
-        margin-bottom: 20px;
+    .footer-section-1 .newsletter-form button {
+        margin: 2vh 0;
+        width: 30%;
     }
-
-    .footer-section .text-white {
-        text-align: center;
-    }
-
-    .footer-section .newsletter-form {
-        width: 100%;
-        display: flex;
-    }
-
-
-
 }
 
 
@@ -120,7 +126,7 @@
 
 
 .footer-section-2 {
-    background-color: #2d2d2d;
+    background-color: #101922;
     color: #ffffff;
     padding: 5vh 0;
 }
@@ -129,7 +135,7 @@
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
-    line-height: 2vh;
+    line-height: 35px;
 }
 
 .footer-section-2 a:hover {
@@ -173,6 +179,10 @@
     font-size: 14px;
 }
 
+.footer-section-2 .icons {
+    margin: 2vh 0;
+}
+
 
 @media (max-width: 768px) {
 
@@ -185,42 +195,63 @@
     }
 
     .footer-section-2-responsive {
-        background-color: #2d2d2d;
+        background-color: #101922;
         color: #ffffff;
-        padding: 2vh 0;
+        padding: 2vh 2vw;
     }
 
     .footer-section-2-responsive .accordion {
-        background-color: #2d2d2d;
+        background-color: #101922;
         border: none !important;
     }
 
     .footer-section-2-responsive .accordion .accordion-item {
         background: none;
-        background-color: #2d2d2d;
+        background-color: #101922;
         border: none;
-        border-bottom: 1px solid #b4b9bb;
+        border-bottom: 1px solid #5e646b;
     }
 
     .footer-section-2-responsive .accordion .accordion-item .accordion-header {
         background: none;
-        background-color: #2d2d2d;
+        background-color: #101922;
     }
 
     .footer-section-2-responsive .accordion .accordion-item .accordion-header .accordion-button {
         background: none;
-        background-color: #2d2d2d;
+        background-color: #101922;
         color: #89c600;
-        border: none;
-        /* Remove the border from the accordion item */
+        /* border: none; */
+        padding: 3vh 0vw;
+        font-size: 1rem;
+        font-weight: 500;
+        box-shadow: none;
+
     }
 
     .footer-section-2-responsive .accordion .accordion-item .accordion-header .accordion-button::after {
-        color: white;
+        content: "";
+        display: inline-block;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-right: 2px solid #aaaeb3;
+        border-bottom: 2px solid #aaaeb3;
+        transform: rotate(45deg);
+        margin-left: auto;
+        transition: transform 0.2s ease-in-out;
     }
 
-    .footer-section-2-responsive .accordion .accordion-item .accordion-header .accordion-button.collapsed::after {
-        color: white;
+    .footer-section-2-responsive .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
+        transform: rotate(-135deg);
+    }
+
+
+    .footer-section-2-responsive .accordion .accordion-item .accordion-body {
+        padding: 0;
+        line-height: 30px;
+        font-size: .8rem;
+        margin-bottom: 3vh;
+
     }
 
     .footer-section-2-responsive .accordion .accordion-item .accordion-body ul li a {
@@ -242,37 +273,49 @@
         color: #b5b5b5;
         font-weight: bold;
         margin-bottom: 0.5vh;
-        font-size: 14px;
+        font-size: 12px;
     }
 
 
 
     .footer-section-2-responsive .footer-phone {
         color: #A1C935;
-        font-size: 20px;
+        font-size: 24px;
         font-weight: bold;
     }
 
     .footer-section-2-responsive .footer-address {
-        font-size: 12px;
+        font-size: 14px;
+        line-height: 22px;
+        color: #b4b9bb;
     }
 
 
+    .footer-section-2-responsive .section-3 h6 {
+        color: #b4b9bb;
+    }
+
     .footer-section-2-responsive .section-3 .payment-icon {
-        margin: 10px;
-        margin-left: 0px;
+        margin: 2vh 0;
+        margin-right: 15px;
         width: 50px;
     }
 
     .footer-section-2-responsive .social-icon {
-        margin: 0 10px;
-        font-size: 24px;
+        margin: 2vh 0;
+        margin-right: 3vw;
+        font-size: 26px;
         color: #A1C935;
     }
 
     .footer-section-2-responsive .footer-bottom-text {
+        margin: 2vh 0;
         color: #b5b5b5;
         font-size: 14px;
     }
+
+
+
+
 
 }

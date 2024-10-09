@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Page1.css";
 import Card from "../../../componets/Card/Card";
 import ASSET_PATHS from "../../../utils/constant";
 
 export default function Page1() {
+
   const imgURL = ASSET_PATHS.IMG_URL;
+  const resImgURL = ASSET_PATHS.RES_IMG_URL;
+
 
   const productCardData = [
     {
@@ -45,6 +48,28 @@ export default function Page1() {
     },
   ];
 
+
+
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 700);
+    };
+
+    updateScreenSize(); // Set initial state
+    window.addEventListener('resize', updateScreenSize); // Update on resize
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize); // Clean up
+    };
+  }, []);
+
+
+
+
+
   return (
     <>
       <div className="page-1">
@@ -62,35 +87,74 @@ export default function Page1() {
           <Card productCardData={productCardData} />
 
           <div className="image-container">
-            <img src={`${imgURL}/page1-1.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-1.jpg` : `${imgURL}/page1-1.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
           </div>
 
           <div className="image-container">
-            <img src={`${imgURL}/page1-2.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-2.jpg` : `${imgURL}/page1-2.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-3.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-3.jpg` : `${imgURL}/page1-3.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-4.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-4.jpg` : `${imgURL}/page1-4.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-5.jpg`} className="w-100" />
+
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-5.jpg` : `${imgURL}/page1-5.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-6.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-6.jpg` : `${imgURL}/page1-6.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
+
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-7.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-7.jpg` : `${imgURL}/page1-7.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
           <div className="image-container ">
-            <img src={`${imgURL}/page1-8.jpg`} className="w-100" />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/page1-8.jpg` : `${imgURL}/page1-8.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
           </div>
         </div>
       </div>

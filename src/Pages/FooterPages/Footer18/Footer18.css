@@ -1,24 +1,33 @@
-.Footer18 .main {
-    margin-top: 5vh;
-}
-
 .Footer18 .heading {
     margin: 2vh 0;
+    text-align: center;
+    padding: 5vh 20vw;
 }
 
 .Footer18 .heading h1 {
-    font-size: 2.1rem;
+    font-size: 2.5rem;
     font-weight: bold;
 }
 
 .Footer18 .para {
+    margin: 5vh 0;
     padding: 5vh 0;
     background-color: #f0f3f5;
-    font-size: 2.1rem;
-    font-weight: bold;
 }
 
+.Footer18 .para h1 {
+    font-size: 1.7rem;
+    margin: 2vh 0;
+}
 
+.Footer18 .para p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.Footer18 .para a {
+    color: #89c600;
+}
 
 
 .Footer18 .video-container {
@@ -48,6 +57,17 @@
 
 @media (max-width: 768px) {
 
+
+    .Footer18 .video-container {
+        margin: 2vh 0;
+        /* Remove any default margin */
+        padding: 0;
+        /* Remove any default padding */
+        display: block;
+        /* Ensure the container behaves as a block element */
+    }
+
+
     .Footer18 iframe {
         display: block;
         /* Ensure the iframe behaves as a block element */
@@ -62,5 +82,20 @@
         border: none;
         /* Remove border if any */
     }
+
+    .Footer18 .heading {
+        padding: 5vh 5vw;
+    }
+    
+    .Footer18 .heading h1 {
+        font-size: 2rem;
+    }
+    
+
+    .Footer18 .para {
+        padding: 5vh 5vw;
+    }
+    
+
 
 }

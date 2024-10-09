@@ -100,7 +100,7 @@ export default function Footer() {
               <div className="col-lg-2 col-md-4 col-sm-6 mb-4">
                 <h5 className="footer-title">MEGAPORT Hotline</h5>
                 <p className="footer-phone">02 49 88 06 17</p>
-                <p className="footer-address">Nos conseillers sont à votre écoute du lundi au vendredi, entre 8h–16h.</p>
+                <p className="footer-address">Nos conseillers sont à votre écoute au 02 49 88 06 17 (tarif local) du lundi au vendredi, entre 8h–16h.</p>
               </div>
             </div>
 
@@ -109,7 +109,7 @@ export default function Footer() {
             <div className="row mt-4">
               {/* Payment Icons */}
               <div className="col-6 d-flex flex-column align-items-start">
-                <h6>Méthodes de paiement</h6>
+                <h6 className='icons'>Méthodes de paiement</h6>
 
                 <div>
                   <img src={`${imgURL}/icon-visa.svg`} alt="Visa" className="payment-icon" />
@@ -143,6 +143,9 @@ export default function Footer() {
           </div>
 
         </div>
+
+
+
 
         <div className='container-fluid footer-section-2-responsive'>
           <div className='container'>
@@ -248,7 +251,7 @@ export default function Footer() {
             <div className='contact'>
               <h5 className="footer-title">MEGAPORT Hotline</h5>
               <p className="footer-phone">02 49 88 06 17</p>
-              <p className="footer-address">Nos conseillers sont à votre écoute du lundi au vendredi, entre 8h–16h.</p>
+              <p className="footer-address">Nos conseillers sont à votre écoute au 02 49 88 06 17 (tarif local) du lundi au vendredi, entre 8h–16h.</p>
             </div>
 
 

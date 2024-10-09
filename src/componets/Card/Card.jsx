@@ -63,7 +63,7 @@ export default function Card({ productCardData }) { // Accept the data as props
                   <p className="m-0 old-price">{product.oldPrice}</p>
                   <span className="new-price">{product.newPrice}</span>
                 </div>
-                <div>
+                <div className="card-btn">
                   <button className="cart-btn"><i className="fas fa-shopping-cart" /></button>
                   <button className="plus-btn">plus</button>
                 </div>

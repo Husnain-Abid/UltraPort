@@ -1,3 +1,12 @@
+.landing-page {
+    margin: 5vh 0;
+    /* Remove any default margin */
+    padding: 0 5vw;
+    /* Remove any default padding */
+    display: block;
+    /* Ensure the container behaves as a block element */
+}
+
 .landing-page .video-container {
     margin: 0;
     /* Remove any default margin */

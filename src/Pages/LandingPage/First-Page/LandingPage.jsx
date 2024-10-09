@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./LandingPage.css";
-import Card from '../../componets/Card/Card';
-import ASSET_PATHS from '../../utils/constant';
+import ASSET_PATHS from '../../../utils/constant';
+import Card from '../../../componets/Card/Card';
 
 export default function LandingPage() {
 
   const imgURL = ASSET_PATHS.IMG_URL;
+  const resImgURL = ASSET_PATHS.RES_IMG_URL;
 
   const productCardData = [
     {
@@ -46,6 +47,28 @@ export default function LandingPage() {
     }
   ];
 
+
+
+
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const updateScreenSize = () => {
+      setIsSmallScreen(window.innerWidth <= 700);
+    };
+
+    updateScreenSize(); // Set initial state
+    window.addEventListener('resize', updateScreenSize); // Update on resize
+
+    return () => {
+      window.removeEventListener('resize', updateScreenSize); // Clean up
+    };
+  }, []);
+
+
+
+
+
   return (
     <>
 
@@ -53,15 +76,37 @@ export default function LandingPage() {
 
         <div className='container '>
           <div className='image-container'>
-            <img src={`${imgURL}/landing_image_1.jpg`} className='w-100' />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_1.jpg` : `${imgURL}/landing_image_1.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
           <div className='image-container'>
-            <img src={`${imgURL}/landing_image_2.jpg`} className='w-100' />
+            <img
+              src={`${resImgURL}/landing_image_2.jpg`}
+              className={`w-100 ${isSmallScreen ? '' : 'd-none'}`} // Add 'hidden' class if not small screen
+              alt="Landing"
+            />
           </div>
 
           <div className='image-container'>
-            <img src={`${imgURL}/landing_image_3.jpg`} className='w-100' />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_3.jpg` : `${imgURL}/landing_image_2.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+          </div>
+
+          <div className='image-container'>
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_4.jpg` : `${imgURL}/landing_image_3.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
+
           </div>
 
           <div className='video-container'>
@@ -71,7 +116,14 @@ export default function LandingPage() {
 
 
           <div className='image-container '>
-            <img src={`${imgURL}/landing_image_5.jpg`} className='w-100' />
+
+
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_5.jpg` : `${imgURL}/landing_image_5.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
+
           </div>
 
 
@@ -83,7 +135,11 @@ export default function LandingPage() {
 
 
           <div className='image-container '>
-            <img src={`${imgURL}/landing_image_7.jpg`} className='w-100' />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_6.jpg` : `${imgURL}/landing_image_7.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
 
@@ -94,7 +150,11 @@ export default function LandingPage() {
 
 
           <div className='image-container '>
-            <img src={`${imgURL}/landing_image_8.jpg`} className='w-100' />
+            <img
+              src={`${isSmallScreen ? `${resImgURL}/landing_image_7.jpg` : `${imgURL}/landing_image_8.jpg`}`}
+              className='w-100'
+              alt="Landing"
+            />
           </div>
 
 

@@ -7,7 +7,7 @@ export default function HomeCarosuel() {
   const imgURL = ASSET_PATHS.IMG_URL;
 
   const carouselData = [
-    { image: 'HomeCarosuel_1.jpg', url: "/landing-page" },
+    { image: 'HomeCarosuel_1.jpg', url: "/nvidia-rtx-40-star-wars-outlaws" },
     { image: 'HomeCarosuel_2.jpg', url: "/amd-radeon-rx-7800xt-7700xt-game-bundle" },
     { image: 'HomeCarosuel_3.jpg', url: "/powered-by-msi" },
     { image: 'HomeCarosuel_4.jpg', url: "/amd-ryzen-9000" },
