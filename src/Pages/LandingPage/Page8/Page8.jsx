@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "./Page8.css";
 import Card from '../../../componets/Card/Card';
 import ASSET_PATHS from '../../../utils/constant';
