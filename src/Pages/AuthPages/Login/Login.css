@@ -1,0 +1,81 @@
+.login .main {
+    margin-top: 5vh;
+}
+
+.login .heading {
+    margin: 2vh 0;
+}
+
+.login .heading h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+
+.login .section h4 {
+    border-bottom: 1px solid #c3c8cd;
+    padding: 20px 0;
+    font-weight: 600;
+    font-size: 1.3rem;
+    margin: 10px 0;
+}
+
+.login .section form label {
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+
+.login .section .form-control {
+    border-radius: 0;
+    padding: 10px;
+}
+
+.login .section .form-check {
+    margin: 10px 0;
+}
+
+.login .section .form-check-label {
+    margin: 0;
+    font-weight: 300;
+}
+
+.login .form-button {
+    margin: 5vh 0;
+}
+
+.login .form-button button {
+    padding: 15px 30px;
+    background-color: #101922;
+    color: white;
+    margin-bottom: 1vh;
+}
+
+.login .form-button a {
+
+    color: #89c600;
+}
+
+.login .section-2 {
+    margin-bottom: 10vh;
+}
+
+.login .section-2 h4 {
+    border-bottom: 1px solid #c3c8cd;
+    padding-bottom: 20px;
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.login .section-2 button {
+    border-color: #a88734 #9c7e31 #846a29;
+    background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+    padding: 8px 5px;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.login .section-2 button img {
+    max-height: 17px;
+}

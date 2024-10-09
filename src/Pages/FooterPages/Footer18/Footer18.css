@@ -1,0 +1,66 @@
+.Footer18 .main {
+    margin-top: 5vh;
+}
+
+.Footer18 .heading {
+    margin: 2vh 0;
+}
+
+.Footer18 .heading h1 {
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+.Footer18 .para {
+    padding: 5vh 0;
+    background-color: #f0f3f5;
+    font-size: 2.1rem;
+    font-weight: bold;
+}
+
+
+
+
+.Footer18 .video-container {
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+    /* Remove any default padding */
+    display: block;
+    /* Ensure the container behaves as a block element */
+}
+
+.Footer18 iframe {
+    display: block;
+    /* Ensure the iframe behaves as a block element */
+    margin: 0;
+    /* Remove any default margin */
+    padding: 0;
+    /* Remove any default padding */
+    width: 100%;
+    /* Ensure it takes full width */
+    border: none;
+    /* Remove border if any */
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .Footer18 iframe {
+        display: block;
+        /* Ensure the iframe behaves as a block element */
+        margin: 0;
+        /* Remove any default margin */
+        padding: 0;
+        /* Remove any default padding */
+        width: 100%;
+        /* Ensure it takes full width */
+        height: auto;
+        /* Maintain aspect ratio */
+        border: none;
+        /* Remove border if any */
+    }
+
+}

@@ -1,0 +1,15 @@
+.Footer15 .content h5 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: left;
+    margin: 5vh 0;
+}
+
+.Footer15 .content p {
+    font-size: 1rem;
+    line-height: 1.4;
+    color: #5e646b;
+    font-weight: 400;
+    text-align: left;
+    margin: 1vh 0;
+}

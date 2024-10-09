@@ -1,0 +1,94 @@
+.Footer16 .section-1 {
+    background-color: #f0f3f5;
+    padding: 5vh 20vw;
+}
+
+.Footer16 .section-1 h1 {
+    font-size: 2rem;
+    margin: 2vh 0;
+}
+
+.Footer16 .section {
+    margin: 10vh 0;
+}
+
+.Footer16 .section h1 {
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+    color: black;
+    font-weight: 500;
+}
+
+.Footer16 .section p {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    font-weight: 400;
+}
+
+.Footer16 .section .box {
+    padding: 0 5vw;
+}
+
+
+
+.Footer16.image-container {
+    width: 100%;
+    /* Full width of the parent container */
+    overflow: hidden;
+    /* Ensure that any overflowing parts are hidden */
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center the image */
+}
+
+.Footer16 .image-container img {
+    width: 100%;
+    /* Make the image take the full width of the container */
+    height: auto;
+    /* Maintain aspect ratio */
+    display: block;
+    /* Prevent any extra space below the image */
+}
+
+.Footer16 .section-2 {
+    background-color: #f0f3f5;
+    padding: 5vh 20vw;
+}
+
+
+
+.Footer16 .section-2 p {
+    margin-top: 5vh;
+    text-align: center;
+    color: #77797a;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .Footer16 .container {
+        padding: 0;
+    }
+
+    .Footer16 .section-1 {
+        padding: 5vh 10vw;
+    }
+
+    .Footer16 .section {
+        margin: 5vh 0;
+    }
+
+    .Footer16 .section .box {
+        margin: 1vh 0;
+    }
+    
+.Footer16 .section-2 {
+    background-color: #f0f3f5;
+    padding: 5vh 10vw;
+}
+
+
+}
